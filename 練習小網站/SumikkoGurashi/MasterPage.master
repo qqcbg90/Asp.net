@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta property="fb:app_id" content="930298957423233">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>    
+</head>
+
+<body style="background-image:url(../圖/bg.jpg); background-repeat: repeat; background-attachment: fixed;">
+    <form id="form1" runat="server">
+
+    <%--版面設定--%>
+    <style type ="text/css">
+        p {
+            width: 1006px;
+            margin-left: auto;
+            margin-right:auto;
+            text-align: center;
+        }
+        h3 {
+            width: 1006px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: right;
+            color: #7E634D;
+        }
+        </style>
+
+    <div>    
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <%--右上角註冊&登入--%>
+        
+        <h3>
+            <asp:LinkButton ID="LinkButton3" runat="server" ForeColor="#978270" PostBackUrl="~/SumikkoGurashi/yukiki.aspx" Font-Size="Medium" >更換頭貼</asp:LinkButton>
+            <asp:Image ID="Image1" runat="server" Height="30px" Visible="False" ImageAlign="AbsBottom" />
+            <asp:Label ID="Label1" runat="server" Text="XXX您好" Visible="False" text-align="Left" ></asp:Label>
+            <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#7E634D" PostBackUrl="~/SumikkoGurashi/signupTEST.aspx" >註冊</asp:LinkButton>&nbsp;|
+            <asp:LinkButton ID="LinkButton2" runat="server" ForeColor="#7E634D" OnClick="LinkButton2_Click" >登入</asp:LinkButton>
+        </h3>
+        
+        <%--頁首--%>        
+        <link href="封面輪播.css" rel="stylesheet" />
+        <p class="slider_container">
+            <a><img src="../圖/top05.png" alt="pure css3 slider" /></a>
+            <a><img src="../圖/top04.jpg" alt="pure css3 slider" /></a>
+            <a><img src="../圖/top03.png" alt="pure css3 slider" /></a>
+            <a><img src="../圖/top02.png" alt="pure css3 slider" /></a>
+            <a><img src="../圖/top01.png" alt="pure css3 slider" /></a>
+        </p>
+        
+        <%--選單--%>   
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center">
+            <asp:TableRow runat="server" >
+                <asp:TableCell runat="server" >
+                    <asp:ImageButton ID="首頁" runat="server" ImageUrl="../圖/btn01.png" Visible="True" PostBackUrl="~/SumikkoGurashi/Home.aspx" />
+                    <asp:ImageButton ID="角色介紹" runat="server"  ImageUrl="../圖/btn02.png" Visible="True" PostBackUrl="~/SumikkoGurashi/Sumikko.aspx" />
+                    <asp:ImageButton ID="圖片集" runat="server"  ImageUrl="../圖/btn03.png" Visible="True" PostBackUrl="~/SumikkoGurashi/Image.aspx" />
+                    <asp:ImageButton ID="youtube" runat="server"  ImageUrl="../圖/btn04.png" Visible="True" PostBackUrl="~/SumikkoGurashi/Youtube.aspx" />
+                    <asp:ImageButton ID="活動" runat="server"  ImageUrl="../圖/btn05.png" Visible="True" Enabled="True" PostBackUrl="~/SumikkoGurashi/Activity.aspx" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+
+        <%--各頁內容--%>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+        <%--頁尾--%>
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center">
+            <asp:TableRow runat="server" >
+                <asp:TableCell runat="server" >
+                    <img src="../圖/end.png" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <br />
+        <h3>
+            <asp:LinkButton ID="LinkButton6" runat="server" ForeColor="#978270" Font-Size="Medium" OnClientClick="window.open('會員重整.aspx', 'external', 'width=1000,height=350,left=100,top=100')" Visible="False">編輯會員資料</asp:LinkButton>&nbsp;|
+            <asp:LinkButton ID="LinkButton4" runat="server" ForeColor="#978270" PostBackUrl="~/SumikkoGurashi/huang2.aspx" Font-Size="Medium" >留言板</asp:LinkButton>&nbsp;|
+            <asp:LinkButton ID="LinkButton5" runat="server" ForeColor="#978270" Font-Size="Medium" OnClientClick="window.open('Default.aspx', 'external', 'width=450,height=516,left=300,top=50')">小測驗</asp:LinkButton>&nbsp;|
+        </h3>
+    </div>
+    </form>
+</body>
+</html>

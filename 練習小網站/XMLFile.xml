@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PostCodeService>
+  <county name="活潑">
+    <town name="大" />
+    <town name="小"/>
+  </county>
+  <county name="安靜">
+    <town name="大" />
+    <town name="小"/>
+  </county>
+</PostCodeService>

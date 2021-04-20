@@ -1,0 +1,17 @@
+﻿.tb {
+    width: 1003px;
+    height: 418px;
+    border-collapse: unset;
+    font: 16px "微軟正黑體";
+    color: #7E634D;
+}
+.tb {
+    border: 1px solid #B89F8B;
+}
+.td1 {
+    text-align: center;
+    font: 16px
+}
+.td1:hover {
+    background: url('../圖/topbg0.png');
+}

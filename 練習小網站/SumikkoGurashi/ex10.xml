@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/圖/d1.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/圖/d2.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/圖/d3.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/圖/d4.png</ImageUrl>
+  </Ad>  
+  <Ad>
+    <ImageUrl>~/圖/d5.png</ImageUrl>
+  </Ad>
+</Advertisements>
